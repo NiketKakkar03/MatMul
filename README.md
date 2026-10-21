@@ -73,6 +73,53 @@ The implementations were developed in stages:
 Every optimization was required to pass the same correctness checks. A faster
 result was not accepted if it produced an invalid numerical result.
 
+## Implementation design
+
+The diagram below shows how the main parts of MatMul work together. The C++
+program handles matrices, multiplication, correctness checks, and individual
+benchmarks. The Python tools run larger studies and turn the saved measurements
+into audited reports and charts.
+
+```mermaid
+flowchart TD
+    User["Developer or automation"] --> CLI["MatMul command-line interface"]
+
+    CLI --> Benchmark["Benchmark command"]
+    CLI --> Verify["Verification command"]
+    CLI --> Profile["Sustained profiling command"]
+
+    Benchmark --> Inputs["Deterministic matrix inputs"]
+    Verify --> Inputs
+    Profile --> Inputs
+
+    Inputs --> Dispatch["Kernel dispatcher"]
+    Dispatch --> Naive["Naive i-j-k kernel"]
+    Dispatch --> Reordered["Six loop-order kernels"]
+    Dispatch --> Blocked["Cache-blocked kernel"]
+    Dispatch --> Parallel["Multithreaded blocked kernel"]
+    Dispatch --> Accelerate["Apple Accelerate BLAS"]
+
+    Naive --> Output["Output matrix"]
+    Reordered --> Output
+    Blocked --> Output
+    Parallel --> Output
+    Accelerate --> Output
+
+    Output --> Oracle["Independent FP64 correctness reference"]
+    Output --> Timing["Timing, GFLOP/s, variability, and checksum"]
+    Oracle --> Result["Verified CSV, JSON, or terminal result"]
+    Timing --> Result
+
+    Result --> Sweep["Experiment and repeat runners"]
+    Sweep --> Audit["Coverage and repeat audit"]
+    Audit --> Analysis["Tables, charts, and technical reports"]
+    Profile --> Native["Native macOS stack profiles"]
+```
+
+The timed section contains only the selected multiplication operation. Input
+creation and final correctness checking happen outside that section. This keeps
+the comparison focused on the kernel while still rejecting incorrect results.
+
 ## Results
 
 The completed study contains:
@@ -113,8 +160,6 @@ the technical report.
 
 Start here if you want to understand the project in more depth:
 
-- [Implementation guide](IMPLEMENTATION_GUIDE.md) — explains the architecture
-  and what every implemented file does.
 - [Final technical report](reports/final-report.md) — methodology, measurements,
   findings, failed experiments, and limitations.
 - [Experiment log](reports/experiment-log.md) — predictions, observations, and
@@ -213,16 +258,13 @@ rates.
 
 ```text
 include/matmul/   Public C++ interfaces
-src/                   Matrix container, kernels, benchmark, profiling, and CLI
-tests/                 C++ and Python correctness/tooling tests
-scripts/               Experiment, audit, analysis, plotting, and profile tools
-results/final/         Audited measurements, repeat analysis, and charts
-reports/               Experiment log and technical reports
-traces/                Native profiling evidence
+src/              Matrix container, kernels, benchmark, profiling, and CLI
+tests/            C++ and Python correctness/tooling tests
+scripts/          Experiment, audit, analysis, plotting, and profile tools
+results/final/    Audited measurements, repeat analysis, and charts
+reports/          Experiment log and technical reports
+traces/           Native profiling evidence
 ```
-
-For a file-by-file explanation, see the
-[implementation guide](IMPLEMENTATION_GUIDE.md).
 
 ## Scope and limitations
 
