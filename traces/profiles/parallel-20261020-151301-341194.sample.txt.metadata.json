@@ -1,0 +1,151 @@
+{
+  "backend": "sample",
+  "implementation": "parallel",
+  "recorded_utc": "2026-10-20T19:13:01.341443+00:00",
+  "matrix_size": 512,
+  "block_size": 64,
+  "requested_threads": "auto",
+  "capture_seconds": 5,
+  "sampling_interval_ms": 1,
+  "binary_sha256": "5cf5c830a12641afad5dec0b4958213c65c7687cb1fd5068ed42b5269e0426d9",
+  "target_command": [
+    "/Users/niketkakkar/Desktop/Projects/MatMul/build/profile/matrixforge",
+    "profile",
+    "--implementation",
+    "parallel",
+    "--size",
+    "512",
+    "--block-size",
+    "64",
+    "--threads",
+    "auto",
+    "--warmups",
+    "1",
+    "--duration",
+    "7",
+    "--wait-for-profiler"
+  ],
+  "output": "/Users/niketkakkar/Desktop/Projects/MatMul/traces/profiles/parallel-20261020-151301-341194.sample.txt",
+  "environment_before": {
+    "machine_id": "09986280057ce56ed84ce94054fc8b3f7384587d41d1aae4c3ecbca4a8ed6093",
+    "environment_id": "88b352bed13b1bdee9fbeb459da44b3b89dd476ac1892e30723cab3e2448e5bc",
+    "machine": {
+      "system": "Darwin",
+      "release": "25.6.0",
+      "architecture": "arm64",
+      "processor": "arm",
+      "hostname": "Dhirens-MacBook-Pro-2.local",
+      "logical_cpus": 8,
+      "hw.model": {
+        "available": true,
+        "output": "MacBookPro18,3"
+      },
+      "hw.memsize": {
+        "available": true,
+        "output": "17179869184"
+      },
+      "machdep.cpu.brand_string": {
+        "available": true,
+        "output": "Apple M1 Pro"
+      }
+    },
+    "environment": {
+      "power_source": "AC Power",
+      "thread_environment": {
+        "VECLIB_MAXIMUM_THREADS": null,
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "OMP_PROC_BIND": null,
+        "OMP_PLACES": null
+      }
+    },
+    "controls": {
+      "observed_utc": "2026-10-20T19:13:01.342136+00:00",
+      "load_average_1_5_15_minutes": [
+        4.0439453125,
+        6.17626953125,
+        6.02685546875
+      ],
+      "power": {
+        "available": true,
+        "output": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=37159011)\t100%; finishing charge; 0:14 remaining present: true"
+      },
+      "thermal": {
+        "available": true,
+        "output": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded"
+      }
+    }
+  },
+  "status": "complete",
+  "limitations": [
+    "Stack samples are not function-call counts or hardware counters.",
+    "A short readiness-wait interval can appear before kernel execution.",
+    "Correctness verification runs separately and is excluded from this target."
+  ],
+  "recording_command": [
+    "sample",
+    "44336",
+    "5",
+    "1",
+    "-file",
+    "/Users/niketkakkar/Desktop/Projects/MatMul/traces/profiles/parallel-20261020-151301-341194.sample.txt"
+  ],
+  "kernel_workload": {
+    "implementation": "parallel",
+    "iterations": 1900,
+    "elapsed_time_ms": 7000.177,
+    "checksum": -6048.658642622833
+  },
+  "environment_after": {
+    "machine_id": "09986280057ce56ed84ce94054fc8b3f7384587d41d1aae4c3ecbca4a8ed6093",
+    "environment_id": "88b352bed13b1bdee9fbeb459da44b3b89dd476ac1892e30723cab3e2448e5bc",
+    "machine": {
+      "system": "Darwin",
+      "release": "25.6.0",
+      "architecture": "arm64",
+      "processor": "arm",
+      "hostname": "Dhirens-MacBook-Pro-2.local",
+      "logical_cpus": 8,
+      "hw.model": {
+        "available": true,
+        "output": "MacBookPro18,3"
+      },
+      "hw.memsize": {
+        "available": true,
+        "output": "17179869184"
+      },
+      "machdep.cpu.brand_string": {
+        "available": true,
+        "output": "Apple M1 Pro"
+      }
+    },
+    "environment": {
+      "power_source": "AC Power",
+      "thread_environment": {
+        "VECLIB_MAXIMUM_THREADS": null,
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "OMP_PROC_BIND": null,
+        "OMP_PLACES": null
+      }
+    },
+    "controls": {
+      "observed_utc": "2026-10-20T19:13:08.631190+00:00",
+      "load_average_1_5_15_minutes": [
+        4.5205078125,
+        6.23974609375,
+        6.0498046875
+      ],
+      "power": {
+        "available": true,
+        "output": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=37159011)\t100%; finishing charge; 0:14 remaining present: true"
+      },
+      "thermal": {
+        "available": true,
+        "output": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded"
+      }
+    }
+  }
+}

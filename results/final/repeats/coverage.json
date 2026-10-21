@@ -1,0 +1,76 @@
+{
+  "input_files": [
+    {
+      "path": "/Users/niketkakkar/Desktop/Projects/MatMul/results/final/raw/O3.csv",
+      "rows": 252,
+      "legacy_rows": 0,
+      "missing_binary_hash_rows": 0
+    },
+    {
+      "path": "/Users/niketkakkar/Desktop/Projects/MatMul/results/final/raw/O2.csv",
+      "rows": 60,
+      "legacy_rows": 0,
+      "missing_binary_hash_rows": 0
+    },
+    {
+      "path": "/Users/niketkakkar/Desktop/Projects/MatMul/results/final/raw/fast.csv",
+      "rows": 60,
+      "legacy_rows": 0,
+      "missing_binary_hash_rows": 0
+    },
+    {
+      "path": "/Users/niketkakkar/Desktop/Projects/MatMul/results/final/raw/O0.csv",
+      "rows": 60,
+      "legacy_rows": 0,
+      "missing_binary_hash_rows": 0
+    },
+    {
+      "path": "/Users/niketkakkar/Desktop/Projects/MatMul/results/final/repeat_raw/O3_small.csv",
+      "rows": 252,
+      "legacy_rows": 0,
+      "missing_binary_hash_rows": 0
+    },
+    {
+      "path": "/Users/niketkakkar/Desktop/Projects/MatMul/results/final/repeat_raw/O3_large.csv",
+      "rows": 120,
+      "legacy_rows": 0,
+      "missing_binary_hash_rows": 0
+    },
+    {
+      "path": "/Users/niketkakkar/Desktop/Projects/MatMul/results/final/repeat_raw/O0.csv",
+      "rows": 30,
+      "legacy_rows": 0,
+      "missing_binary_hash_rows": 0
+    },
+    {
+      "path": "/Users/niketkakkar/Desktop/Projects/MatMul/results/final/repeat_raw/O2.csv",
+      "rows": 30,
+      "legacy_rows": 0,
+      "missing_binary_hash_rows": 0
+    },
+    {
+      "path": "/Users/niketkakkar/Desktop/Projects/MatMul/results/final/repeat_raw/fast.csv",
+      "rows": 30,
+      "legacy_rows": 0,
+      "missing_binary_hash_rows": 0
+    }
+  ],
+  "measurement_rows": 894,
+  "exact_configuration_groups": 432,
+  "groups_by_independent_sweep_count": {
+    "1": 278,
+    "4": 154
+  },
+  "groups_with_at_least_three_independent_sweeps": 154,
+  "matched_binary_groups_with_at_least_three_independent_sweeps": 154,
+  "bootstrap_samples": 10000,
+  "method": "Percentile bootstrap of independent sweep medians; no pooling of iteration durations.",
+  "limitations": [
+    "Collection IDs declare independence; CSV metadata cannot prove separate physical executions.",
+    "Legacy CSVs use one collection per resolved input filename; copied files are not new experiments.",
+    "Missing binary hashes prevent establishing matched-binary evidence across input files.",
+    "Intervals from fewer than ten independent sweeps are exploratory and may understate uncertainty.",
+    "Bootstrap intervals do not account for systematic thermal, load, power, or measurement bias.",
+    "Coverage describes supplied observations, not completion against a planned experiment matrix."
+  ]
+}

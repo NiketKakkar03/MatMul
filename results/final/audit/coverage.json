@@ -1,0 +1,126 @@
+{
+  "complete": true,
+  "cpu_count": 8,
+  "adaptive_iterations": true,
+  "iteration_policy": {
+    "warmups": 2,
+    "repetitions": 9,
+    "seed": 42,
+    "large_threshold": 134217728,
+    "large_warmups": 1,
+    "large_repetitions": 3
+  },
+  "planned_total": 432,
+  "measurement_rows": 432,
+  "valid_observations": 432,
+  "modes": {
+    "O3": {
+      "planned": 252,
+      "identity_groups": [
+        {
+          "binary_sha256": "2118f62f9ecfa27e819eb23dbfec6a7d1ef23fee56239e6b21d5bcb0b89f7b60",
+          "machine_id": "09986280057ce56ed84ce94054fc8b3f7384587d41d1aae4c3ecbca4a8ed6093",
+          "environment_id": "daa73a13e5a76288f6914d4d16652db71dfac44b8194c7d43f5a82821a39d7f0",
+          "planned": 252,
+          "completed": 252,
+          "observations": 252,
+          "missing": [],
+          "unexpected": [],
+          "source_files": [
+            "/Users/niketkakkar/Desktop/Projects/MatMul/results/final/raw/O3.csv"
+          ],
+          "sweep_indices": [
+            0
+          ],
+          "complete": true
+        }
+      ],
+      "complete": true
+    },
+    "O2": {
+      "planned": 60,
+      "identity_groups": [
+        {
+          "binary_sha256": "383bc130e3ff9249585b824ec66622c01c83f963074daad5665367326a95ecdc",
+          "machine_id": "09986280057ce56ed84ce94054fc8b3f7384587d41d1aae4c3ecbca4a8ed6093",
+          "environment_id": "daa73a13e5a76288f6914d4d16652db71dfac44b8194c7d43f5a82821a39d7f0",
+          "planned": 60,
+          "completed": 60,
+          "observations": 60,
+          "missing": [],
+          "unexpected": [],
+          "source_files": [
+            "/Users/niketkakkar/Desktop/Projects/MatMul/results/final/raw/O2.csv"
+          ],
+          "sweep_indices": [
+            0
+          ],
+          "complete": true
+        }
+      ],
+      "complete": true
+    },
+    "fast": {
+      "planned": 60,
+      "identity_groups": [
+        {
+          "binary_sha256": "29bd086fda797e1f40b94db72ba0de5c141871723a37c6e3d7fe6b226e638591",
+          "machine_id": "09986280057ce56ed84ce94054fc8b3f7384587d41d1aae4c3ecbca4a8ed6093",
+          "environment_id": "daa73a13e5a76288f6914d4d16652db71dfac44b8194c7d43f5a82821a39d7f0",
+          "planned": 60,
+          "completed": 60,
+          "observations": 60,
+          "missing": [],
+          "unexpected": [],
+          "source_files": [
+            "/Users/niketkakkar/Desktop/Projects/MatMul/results/final/raw/fast.csv"
+          ],
+          "sweep_indices": [
+            0
+          ],
+          "complete": true
+        }
+      ],
+      "complete": true
+    },
+    "O0": {
+      "planned": 60,
+      "identity_groups": [
+        {
+          "binary_sha256": "918ea76e2881e9f2b8d693abdf5c418636357e368244916bc3ed33291ccd8154",
+          "machine_id": "09986280057ce56ed84ce94054fc8b3f7384587d41d1aae4c3ecbca4a8ed6093",
+          "environment_id": "daa73a13e5a76288f6914d4d16652db71dfac44b8194c7d43f5a82821a39d7f0",
+          "planned": 60,
+          "completed": 60,
+          "observations": 60,
+          "missing": [],
+          "unexpected": [],
+          "source_files": [
+            "/Users/niketkakkar/Desktop/Projects/MatMul/results/final/raw/O0.csv"
+          ],
+          "sweep_indices": [
+            0
+          ],
+          "complete": true
+        }
+      ],
+      "complete": true
+    }
+  },
+  "invalid_rows": [],
+  "historical_skip_events": [
+    {
+      "file": "/Users/niketkakkar/Desktop/Projects/MatMul/results/final/raw/O0.csv.skipped.jsonl",
+      "line": 1,
+      "reason": "timeout after 600 seconds",
+      "status": "recovered",
+      "implementation": "naive",
+      "rows_a": 2048,
+      "cols_a": 2048,
+      "cols_b": 2048,
+      "block_size": 64,
+      "requested_threads": 1
+    }
+  ],
+  "method": "Coverage is computed separately per build/binary/machine/environment identity. Distinct sweep indices identify repeated observations, not extra workload coverage. Historical skips do not remove later valid results."
+}

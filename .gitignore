@@ -1,0 +1,8 @@
+build/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+traces/**/*.trace/
+IMPLEMENTATION_GUIDE.md
+MatMul_Phase_1_Project_Roadmap.md
